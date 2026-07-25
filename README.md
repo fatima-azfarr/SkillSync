@@ -126,14 +126,4 @@ Built the core utility library:
 
 ---
 
-## Team
 
-| Name | Registration No. | Role |
-|---|---|---|
-| Araish Ahmad | FA23-BCS-033 | Group Leader |
-| Fatima Azfar | FA23-BCS-185 | Member |
-| Uswah Nadir | FA23-BCS-166 | Member |
-
-**Academic Supervisor:** Sir Jawad Shafi  
-**Institution:** COMSATS University Islamabad — Lahore Campus  
-**Program:** BS Computer Science (Session 2023–2027)
