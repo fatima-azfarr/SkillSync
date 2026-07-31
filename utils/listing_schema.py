@@ -29,9 +29,6 @@ class Listings:
             "hash" : self.hash
             }
     
-listing = Listings("Python Intern", "Systems Limited", "rozee.pk", ["Python", "Django"], "2025-08-01", "rozee.pk/job/123")
-with open("test_listings.json","w") as response:
-    json.dump(listing.to_dict(),response,indent = 4)
 
 
     

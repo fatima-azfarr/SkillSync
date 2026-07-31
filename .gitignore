@@ -5,3 +5,7 @@ venv/
 __pycache__/
 venv/
 tempCodeRunnerFile.py
+wuzzuf_checkpoint.txt
+chromedriver
+chromedriver-mac-arm64.zip
+chromedriver-mac-arm64/
