@@ -177,11 +177,29 @@ while page < MAX_PAGES:
                         company = txt
                         break
 
+            # ------------------------------
+            # Skill tags
+            # ------------------------------
+            # The bulleted summary line mixes career level, years of exp,
+            # job category, AND skills together as sibling <a> tags with no
+            # visible distinction — but Wuzzuf's frontend gives skill tags a
+            # different CSS class ("css-5x9pm1") than category/level tags
+            # ("css-o171kl"). This class name is framework-generated and
+            # could change on a future Wuzzuf deploy — if skills come back
+            # empty across many listings, re-inspect a card and update this
+            # selector.
+            skills = []
+            try:
+                skill_els = card.find_elements(By.CSS_SELECTOR, "a.css-5x9pm1")
+                skills = [s.text.strip() for s in skill_els if s.text.strip()]
+            except Exception:
+                pass
+
             listing = Listings(
                 title=title,
                 company=company,
                 source="wuzzuf.net",
-                skills=[],
+                skills=skills,
                 deadline=None,
                 url=job_url,
             )

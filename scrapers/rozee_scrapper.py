@@ -204,11 +204,13 @@ while offset < MAX_PAGES * JOBS_PER_PAGE:
                 pass
 
             # ------------------------------
-            # Skill tags (shown as pill buttons on the card)
+            # Skill tags (shown as pill buttons in the card footer)
             # ------------------------------
             skills = []
             try:
-                tag_els = card.find_elements(By.CSS_SELECTOR, "div.jbody .func-area, div.jbody .tag")
+                tag_els = card.find_elements(
+                    By.CSS_SELECTOR, "div.jfooter .job-dtl span.label"
+                )
                 skills = [t.text.strip() for t in tag_els if t.text.strip()]
             except Exception:
                 pass
